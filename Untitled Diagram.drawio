@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2020-11-12T08:59:49.240Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.193 Safari/537.36" etag="dQ02NMd4C-YhvwWd9Qvg" version="13.9.7" type="github" pages="2">
+<mxfile host="app.diagrams.net" modified="2020-11-12T09:46:39.072Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.193 Safari/537.36" etag="mHbXR8A3FdT7IxMFuAWD" version="13.9.7" type="github" pages="2">
   <diagram id="AG0kQzNRQeQoc2iCLjP1" name="Home_page">
     <mxGraphModel dx="1422" dy="1894" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -130,8 +130,14 @@
         <mxCell id="gAiJz19P4XP56iRevwtF-21" value="Scraper" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="ExMv3PKS4G4o2DIuhnAN-1">
           <mxGeometry x="380" y="560" width="40" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="gAiJz19P4XP56iRevwtF-22" value="Scrapy/ selenium?&amp;nbsp;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="ExMv3PKS4G4o2DIuhnAN-1">
-          <mxGeometry x="295" y="580" width="210" height="80" as="geometry" />
+        <mxCell id="gAiJz19P4XP56iRevwtF-22" value="selenium with firefox + profile&lt;br&gt;data source:&amp;nbsp;&lt;br&gt;Google new&amp;nbsp;&amp;nbsp;&lt;br&gt;Duckduckgo" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="ExMv3PKS4G4o2DIuhnAN-1">
+          <mxGeometry x="295" y="590" width="210" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="gAiJz19P4XP56iRevwtF-23" value="Prediction model" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="ExMv3PKS4G4o2DIuhnAN-1">
+          <mxGeometry x="300" y="700" width="200" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="gAiJz19P4XP56iRevwtF-24" value="Sentiment analysis" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="ExMv3PKS4G4o2DIuhnAN-1">
+          <mxGeometry x="305" y="830" width="200" height="20" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
