@@ -1,1 +1,52 @@
-<mxfile host="app.diagrams.net" modified="2020-11-12T07:37:56.690Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.193 Safari/537.36" version="13.9.7" etag="ZgGApv0bfMN2hJzZMhiK" type="github"><diagram id="AG0kQzNRQeQoc2iCLjP1">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2020-11-12T08:00:00.231Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.193 Safari/537.36" etag="YGE2FBE6Urof1H7V2s1x" version="13.9.7" type="github">
+  <diagram id="AG0kQzNRQeQoc2iCLjP1" name="Home_page">
+    <mxGraphModel dx="1422" dy="1894" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="NGtG3SCU5Q8hICN-BRFl-3" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry y="-1100" width="850" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NGtG3SCU5Q8hICN-BRFl-4" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn0.iconfinder.com/data/icons/navigation-set-arrows-part-one/32/Menu1-128.png" vertex="1" parent="1">
+          <mxGeometry x="10" y="-1099" width="58" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="NGtG3SCU5Q8hICN-BRFl-5" value="" style="pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#505050;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;align=center;shape=mxgraph.office.concepts.search;" vertex="1" parent="1">
+          <mxGeometry x="730" y="-1087.5" width="35" height="35" as="geometry" />
+        </mxCell>
+        <mxCell id="NGtG3SCU5Q8hICN-BRFl-6" value="Ads" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry y="-1040" width="850" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="NGtG3SCU5Q8hICN-BRFl-7" value="News (IPO) etc" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry y="-960" width="440" height="320" as="geometry" />
+        </mxCell>
+        <mxCell id="NGtG3SCU5Q8hICN-BRFl-8" value="Positive news" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="440" y="-960" width="410" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="NGtG3SCU5Q8hICN-BRFl-9" value="Negative news" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="440" y="-810" width="410" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="NGtG3SCU5Q8hICN-BRFl-11" value="Find your favorite stock&#39;s online sentiment analysis" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry y="-640" width="850" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="NGtG3SCU5Q8hICN-BRFl-14" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry y="-460" width="850" height="370" as="geometry" />
+        </mxCell>
+        <mxCell id="NGtG3SCU5Q8hICN-BRFl-15" value="Pie chart of source of data" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="705" y="-435" width="130" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="NGtG3SCU5Q8hICN-BRFl-16" value="Graph of stock&#39;s sentiment analysis overtime" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry y="-460" width="450" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="NGtG3SCU5Q8hICN-BRFl-17" value="Graph of stock&#39;s price overtime" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry y="-280" width="450" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="NGtG3SCU5Q8hICN-BRFl-18" value="Column chart of reliability of sentiment against stock" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="690" y="-300" width="160" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="NGtG3SCU5Q8hICN-BRFl-19" value="Stock price prediction&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="450" y="-460" width="240" height="370" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
