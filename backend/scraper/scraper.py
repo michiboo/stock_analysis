@@ -65,9 +65,10 @@ class firefox_news_scraper:
         hover.perform()
         self._delay(
             'self.dyn_var["articles"] = self.driver.find_elements_by_css_selector(\'div[class="hI5pFf"]\')',
-            [2, 3],
+            [5, 6],
         )
         articles = self.dyn_var["articles"]
+        print(articles)
         assert len(articles) != 0
         headings = []
         for a in articles:
