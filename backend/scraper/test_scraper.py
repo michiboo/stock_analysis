@@ -1,11 +1,12 @@
 from scraper import firefox_news_scraper as fox_scraper
 
-class TestScraper():
+
+class TestScraper:
     def setup(self):
         self.driver = fox_scraper()
-    
+
     def test_search(self):
         for i in range(2):
-            headings = self.driver.google_search('HSBC')
+            headings = self.driver.google_search("HSBC")
             assert len(headings) == 10
         self.driver.close()
