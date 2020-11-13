@@ -30,4 +30,4 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Install Black & check all python file
-        run: pip install black | black --check .
+        run: pip install black && black --check .
