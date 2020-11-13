@@ -16,7 +16,7 @@ class firefox_news_scraper:
         # commentout for remote
         # binary = FirefoxBinary(r'C:\Users\ychan2\AppData\Local\Mozilla Firefox\firefox.exe')
         options = FirefoxOptions()
-        options.add_argument("--headless")
+        options.headless = True
         profile = webdriver.FirefoxProfile()
         profile.set_preference("browser.download.folderList", 2)
         profile.set_preference("browser.download.manager.showWhenStarting", False)
@@ -68,7 +68,6 @@ class firefox_news_scraper:
             [2, 4],
         )
         articles = self.dyn_var["articles"]
-        articles = self.driver.find_elements_by_css_selector('div[class="hI5pFf"]')
         headings = []
         for a in articles:
             headings.append(

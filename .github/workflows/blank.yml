@@ -17,13 +17,8 @@ jobs:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
     services:
-      hub:
-        image: selenium/hub:3.141.59-gold
-      firefox:
-        image: selenium/node-firefox:3.141.59-gold
-        env:
-          HUB_HOST: hub
-          HUB_PORT: 4444
+      selenium:
+        image: selenium/standalone-firefox
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -40,6 +35,8 @@ jobs:
         run: pip install black && black --check .
       - name: install dependencies
         run: pip install -r ./backend/scraper/requirements.txt
+      - name: Check firefox
+        run: firefox -v
       - name: Generate coverage report
         run: |
           pip install pytest
