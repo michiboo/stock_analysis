@@ -34,7 +34,7 @@ class firefox_news_scraper:
         self.dyn_var = {}
 
     def _delay(self, code, t=[0.5, 2]):
-        time.sleep(random.uniform(t[0], t[1]))
+        time.sleep(random.uniform(t[0]  , t[1]))
         exec(code)
 
     def google_search(self, words, n=10):
