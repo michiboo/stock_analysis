@@ -31,8 +31,6 @@ jobs:
           python-version: 3.8
 
       # Runs a single command using the runners shell
-      - name: Install Black & check all python file
-        run: pip install black && black --check .
       - name: install dependencies
         run: pip install -r ./backend/scraper/requirements.txt
       - name: Check firefox
@@ -43,23 +41,13 @@ jobs:
           pip install pytest-cov
           cd ./backend/scraper
           pytest --cov=../../ --cov-report=xml
-      - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v1
-        with:
-          file: ./coverage.xml
-          files: ./coverage1.xml,./coverage2.xml
-          directory: ./coverage/reports/
-          flags: unittests
-          env_vars: OS,PYTHON
-          name: codecov-umbrella
-          fail_ci_if_error: true
-          path_to_write_report: ./coverage/codecov_report.gz
-          verbose: true
       - name: Install pigar
         run: python -m pip install pigar
-      - name: update requirements.txt
-        run: python -m pigar -c ./backend/scraper 
-      - name: Commit changes
+      - name: update requirements.txt & Black format
+        run: |
+          python -m pigar -c ./backend/scraper 
+          pip install black && black .
+      - name: Commit requirement changes
         uses: EndBug/add-and-commit@v5
         with:
           author_name: Micky
@@ -67,4 +55,17 @@ jobs:
           message: "Update requirement.txt"
           add: "*.txt"
         env:
+<<<<<<< HEAD
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+=======
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Commit format changes
+        uses: EndBug/add-and-commit@v5
+        with:
+          author_name: Micky
+          author_email: mail@example.com
+          message: "python file format"
+          add: "*.py"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+>>>>>>> 254ccb6cd764ea10d9c3823d77f1f161649a2d67
