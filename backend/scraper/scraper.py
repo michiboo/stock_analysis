@@ -40,7 +40,7 @@ class firefox_news_scraper:
     def google_search(self, words, n=10):
         def enter_sword():
             self.driver.get("https://www.google.com/")
-            time.sleep(random.uniform(2, 4))
+            time.sleep(random.uniform(2,            4))
             search = self.driver.find_element_by_css_selector(
                 'input[title="Google 搜尋"]'
             )
