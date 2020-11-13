@@ -68,4 +68,16 @@ jobs:
           add: "*.py"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+<<<<<<< HEAD
 >>>>>>> 254ccb6cd764ea10d9c3823d77f1f161649a2d67
+=======
+      - name: Commit format changes
+        uses: EndBug/add-and-commit@v5
+        with:
+          author_name: Micky
+          author_email: mail@example.com
+          message: "python file format"
+          add: "*.py"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+>>>>>>> 1984eb87b38bbf0266bf58d05e7c4461941c6054

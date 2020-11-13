@@ -25,7 +25,7 @@ class firefox_news_scraper:
             "browser.helperApps.neverAsk.saveToDisk", ("application/vnd.ms-excel")
         )
         profile.set_preference("general.warnOnAboutConfig", False)
-        profile.set_preference("intl.accept_languages", "zh-HK")
+        profile.set_preference("intl.accept_languages",       "zh-HK")
         profile.update_preferences()
         self.driver = webdriver.Firefox(
             firefox_profile=profile, options=options
