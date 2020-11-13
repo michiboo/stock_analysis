@@ -35,6 +35,8 @@ jobs:
         run: pip install black && black --check .
       - name: install dependencies
         run: pip install -r ./backend/scraper/requirements.txt
+      - name: Check firefox
+        run: firefox -v
       - name: Generate coverage report
         run: |
           pip install pytest
