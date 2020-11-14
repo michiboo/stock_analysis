@@ -6,7 +6,9 @@ class TestScraper:
         self.driver = fox_scraper()
 
     def test_search(self):
-        for i in range(2):
-            headings = self.driver.google_search("HSBC")
-            assert True
-        self.driver.close()
+        try:
+            for _ in range(2):
+                headings = self.driver.google_search("HSBC")
+                assert len(headings) > 5
+        finally:
+            self.driver.close()
