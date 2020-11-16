@@ -14,13 +14,17 @@ import os
 class firefox_news_scraper:
     def __init__(self):
         # commentout for remote
-        # binary = FirefoxBinary(r'C:\Users\ychan2\AppData\Local\Mozilla Firefox\firefox.exe')
+        binary = FirefoxBinary(r'C:\Users\ychan2\AppData\Local\Mozilla Firefox\firefox.exe')
         options = FirefoxOptions()
-        options.headless = True
+        # options.headless = True
         profile = webdriver.FirefoxProfile()
         profile.set_preference("browser.download.folderList", 2)
         profile.set_preference("browser.download.manager.showWhenStarting", False)
         profile.set_preference("browser.download.dir", os.getcwd())
+        print(dir(profile))
+        profile.set_preference("dom.webnotifications.enabled", False);
+        profile.accept_untrusted_certs = True
+        profile.assume_untrusted_cert_issuer = False
         profile.set_preference(
             "browser.helperApps.neverAsk.saveToDisk", ("application/vnd.ms-excel")
         )
@@ -28,7 +32,7 @@ class firefox_news_scraper:
         profile.set_preference("intl.accept_languages", "zh-HK")
         profile.update_preferences()
         self.driver = webdriver.Firefox(
-            firefox_profile=profile, options=options
+            firefox_profile=profile, options=options, firefox_binary=binary
         )  # , executable_path='./geckodriver'
         # )  # , firefox_binary=binary)
         self.driver.maximize_window()
@@ -37,6 +41,11 @@ class firefox_news_scraper:
     def _delay(self, code, t=[0.5, 2]):
         time.sleep(random.uniform(t[0], t[1]))
         exec(code)
+
+    def perform_keys(self, key):
+        hover = ActionChains(self.driver)
+        hover.send_keys(Keys.ENTER)
+        hover.perform()
 
     def google_search(self, words, n=10):
         def enter_sword():
@@ -61,9 +70,7 @@ class firefox_news_scraper:
             self._delay(
                 "self.driver.find_element(By.XPATH, \"//div[text()='更多']\").click()"
             )
-        hover = ActionChains(self.driver)
-        hover.send_keys(Keys.ENTER)
-        hover.perform()
+        self.perform_keys(Keys.ENTER)
         self._delay(
             'self.dyn_var["articles"] = self.driver.find_elements_by_css_selector(\'div[class="hI5pFf"]\')',
             [2, 4],
@@ -75,6 +82,12 @@ class firefox_news_scraper:
                 a.find_element_by_css_selector('div[class="JheGif jBgGLd"]').text
             )
         return headings
+    
+
+    def duck_duck_go_search(self, words, n=10):
+        self.driver.get('https://duckduckgo.com/')
+        self.driver.find_element_by_css_selector('input[id="search_form_input_homepage"]').send_keys(words)
+        self.perform_keys(Keys.ENTER)
 
         # hover = ActionChains(self.driver)
         # hover.move_to_element(self.driver.find_element_by_css_selector('div[value="CCIS"]'))
@@ -89,3 +102,8 @@ class firefox_news_scraper:
 
     def close(self):
         self.driver.close()
+
+
+a = firefox_news_scraper()
+a.duck_duck_go_search('hsbc')
+# a.close()
