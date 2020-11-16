@@ -25,16 +25,17 @@ class firefox_news_scraper:
             "browser.helperApps.neverAsk.saveToDisk", ("application/vnd.ms-excel")
         )
         profile.set_preference("general.warnOnAboutConfig", False)
-        profile.set_preference("intl.accept_languages",       "zh-HK")
+        profile.set_preference("intl.accept_languages", "zh-HK")
         profile.update_preferences()
         self.driver = webdriver.Firefox(
-            firefox_profile=profile, options=options)#, executable_path='./geckodriver'
-       # )  # , firefox_binary=binary)
+            firefox_profile=profile, options=options
+        )  # , executable_path='./geckodriver'
+        # )  # , firefox_binary=binary)
         self.driver.maximize_window()
         self.dyn_var = {}
 
     def _delay(self, code, t=[0.5, 2]):
-        time.sleep(random.uniform(t[0]  , t[1]))
+        time.sleep(random.uniform(t[0], t[1]))
         exec(code)
 
     def google_search(self, words, n=10):
