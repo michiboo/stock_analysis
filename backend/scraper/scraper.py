@@ -28,8 +28,8 @@ class firefox_news_scraper:
         profile.set_preference("intl.accept_languages",       "zh-HK")
         profile.update_preferences()
         self.driver = webdriver.Firefox(
-            firefox_profile=profile, options=options
-        )  # , firefox_binary=binary)
+            firefox_profile=profile, options=options)#, executable_path='./geckodriver'
+       # )  # , firefox_binary=binary)
         self.driver.maximize_window()
         self.dyn_var = {}
 
