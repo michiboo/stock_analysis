@@ -8,12 +8,12 @@ export const  Make_caro = (props) =>
         {
             name: "Random Name #1",
             description: "Probably the most random thing you have ever seen!",
-            style: {height: '20vh'},
+            style: {height: props.height},
         },
         {
             name: "Random Name #2",
             description: "Hello World!",
-            style: {height: '20vh'},
+            style: {height: props.height},
         }
     ]
     
