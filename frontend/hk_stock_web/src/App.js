@@ -1,32 +1,31 @@
 import './App.css';
-import SearchAppBar from './components/SearchAppBar'
-import {Make_caro} from './components/Carousel'
-import Box from '@material-ui/core/Box';
-import TimeLineGraph from './components/TimeLineGraph';
-import {Button} from '@material-ui/core'
-
-var left_caro_sty={style : { width:'50%', display: 'inline-block'}, height: '40vh'}
-var right_caro_sty={style : { width:'100%'}}
-var top_caro_sty={style : { width:'100%'}}
+import SearchAppBar from './components/SearchAppBar';
+import Home from './pages/Home';
+import Stock from './pages/Stock'
+// import {withRouter} from 'react-router';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Redirect
+} from "react-router-dom";
 
 function App() {
 
-  return (
-    <div className="App">
-      <SearchAppBar/>
-      {Make_caro(top_caro_sty)}
-      {Make_caro(left_caro_sty)}
-      <div style={{float: 'right', width:"50%"}}>
-      {Make_caro(right_caro_sty)}
-      {Make_caro(right_caro_sty)}
-      </div>
-      <Box color="text.primary">
-                This week recommandation
-      </Box>
-      <div style={{position: "relative", width: '50%'}}><TimeLineGraph/></div>
-      
-    </div>
-  );
+    return (
+        <div className="App">
+            <Router>
+                <SearchAppBar />
+                <Switch>
+                    <Route exact path="/">
+                        <Home />
+                    </Route>
+                    <Route path="/stock" component={Stock} />
+                     <Route render={() => <Redirect to="/" />} />
+                </Switch>
+            </Router>
+        </div>
+    );
 }
 
 export default App;
