@@ -6,12 +6,12 @@ export const  Make_caro = (props) =>
 {   
     var items = [
         {
-            name: "Random Name #1",
+            name: props.heading,
             description: "Probably the most random thing you have ever seen!",
             style: {height: props.height},
         },
         {
-            name: "Random Name #2",
+            name: props.heading,
             description: "Hello World!",
             style: {height: props.height},
         }
