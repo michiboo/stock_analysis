@@ -1,5 +1,6 @@
 import React from 'react';
 import TimeLineGraph from '../components/TimeLineGraph';
+import BarChart from '../components/Barchart';
 import axios from 'axios';
 
 
@@ -31,6 +32,7 @@ export default class Stock extends React.Component {
                 <ul>
                 {this.state.stock_price ? (this.state.stock_price.data ? this.state.stock_price.data.map((reptile) => <li>{reptile[1]}</li>) : 'data null') : 'Object still NULL'}
                 </ul>
+                <BarChart></BarChart>
             </div>
         );
     }
